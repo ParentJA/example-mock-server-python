@@ -1,10 +1,15 @@
+# Standard library imports...
+from unittest import skipIf
+
 # Third-party imports...
 from nose.tools import assert_dict_contains_subset, assert_is_instance, assert_true
 
 # Local imports...
-from example.services import get_users
+from ..constants import SKIP_TAGS
+from ..services import get_users
 
 
+@skipIf('real' in SKIP_TAGS, 'Skipping tests that hit the real API server.')
 def test_request_response():
     response = get_users()
 

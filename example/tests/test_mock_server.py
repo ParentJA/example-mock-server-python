@@ -3,8 +3,8 @@ from mock import patch
 from nose.tools import assert_dict_contains_subset, assert_list_equal, assert_true
 
 # Local imports...
-from example.services import get_users
-from example.tests.mocks import get_free_port, start_mock_server
+from ..services import get_users
+from .mocks import get_free_port, start_mock_server
 
 
 class TestMockServer(object):

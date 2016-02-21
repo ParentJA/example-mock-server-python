@@ -5,7 +5,7 @@ from urlparse import urljoin
 import requests
 
 # Local imports...
-from example.constants import BASE_URL
+from .constants import BASE_URL
 
 USERS_URL = urljoin(BASE_URL, 'users')
 
